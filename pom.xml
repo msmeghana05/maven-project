@@ -4,22 +4,21 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.mulesoft.training</groupId>
 	<artifactId>maven-project</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
-    <packaging>mule</packaging>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>mule</packaging>
 	<name>Mule maven-project Application</name>
 	<parent>
-        <groupId>gov.ks.doc</groupId>
-        <artifactId>kdoc-parent</artifactId>
-        <version>1.0.0</version>
-    </parent> 
-    <properties>
+		<groupId>gov.ks.doc</groupId>
+		<artifactId>kdoc-parent</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
 		<mule.version>3.9.1</mule.version>
-    	<mule.tools.version>1.7</mule.tools.version>
-    	<derby.version>10.14.2.0</derby.version>
-    	<activemq.version>5.15.8</activemq.version>
+		<mule.tools.version>1.7</mule.tools.version>
+		<derby.version>10.14.2.0</derby.version>
+		<activemq.version>5.15.8</activemq.version>
 	</properties>
 
 	<build>
@@ -30,7 +29,7 @@
 				<version>${mule.tools.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-                    <copyToAppsDirectory>true</copyToAppsDirectory>
+					<copyToAppsDirectory>true</copyToAppsDirectory>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -67,7 +66,7 @@
 	<dependencies>
 		<!-- Xml configuration -->
 		<dependency>
-        	<groupId>com.mulesoft.muleesb</groupId>
+			<groupId>com.mulesoft.muleesb</groupId>
 			<artifactId>mule-core-ee</artifactId>
 			<version>${mule.version}</version>
 			<scope>provided</scope>
@@ -93,13 +92,13 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-        	<groupId>com.mulesoft.muleesb.transports</groupId>
+			<groupId>com.mulesoft.muleesb.transports</groupId>
 			<artifactId>mule-transport-jdbc-ee</artifactId>
 			<version>${mule.version}</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-        	<groupId>com.mulesoft.muleesb.transports</groupId>
+			<groupId>com.mulesoft.muleesb.transports</groupId>
 			<artifactId>mule-transport-jms-ee</artifactId>
 			<version>${mule.version}</version>
 			<scope>provided</scope>
@@ -123,26 +122,26 @@
 			<version>${mule.version}</version>
 			<scope>provided</scope>
 		</dependency>
-		<!--non-mule dependencies-->
+		<!--non-mule dependencies -->
 		<dependency>
-  			<groupId>org.apache.derby</groupId>
-  			<artifactId>derby</artifactId>
-  			<version>${derby.version}</version>
+			<groupId>org.apache.derby</groupId>
+			<artifactId>derby</artifactId>
+			<version>${derby.version}</version>
 		</dependency>
 		<dependency>
-  			<groupId>org.apache.activemq</groupId>
-  			<artifactId>activemq-client</artifactId>
-  			<version>${activemq.version}</version>
-		</dependency>
-			<dependency>
-  			<groupId>org.apache.activemq</groupId>
-  			<artifactId>activemq-broker</artifactId>
- 			 <version>${activemq.version}</version>
+			<groupId>org.apache.activemq</groupId>
+			<artifactId>activemq-client</artifactId>
+			<version>${activemq.version}</version>
 		</dependency>
 		<dependency>
-  			<groupId>org.apache.activemq</groupId>
-  			<artifactId>activemq-kahadb-store</artifactId>
- 			 <version>${activemq.version}</version>
+			<groupId>org.apache.activemq</groupId>
+			<artifactId>activemq-broker</artifactId>
+			<version>${activemq.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.activemq</groupId>
+			<artifactId>activemq-kahadb-store</artifactId>
+			<version>${activemq.version}</version>
 		</dependency>
 		<!-- for testing -->
 		<dependency>
@@ -151,53 +150,53 @@
 			<version>${mule.version}</version>
 			<scope>test</scope>
 		</dependency>
-	<dependency>
-            <groupId>org.mule.modules</groupId>
-            <artifactId>mule-module-http</artifactId>
-            <version>${mule.version}</version>
-            <scope>provided</scope>
-        </dependency>
-    <dependency>
-            <groupId>org.mule.modules</groupId>
-            <artifactId>mule-module-spring-config</artifactId>
-            <version>${mule.version}</version>
-            <scope>provided</scope>
-        </dependency>
-    <dependency>
-            <groupId>org.mule.modules</groupId>
-            <artifactId>mule-module-db</artifactId>
-            <version>${mule.version}</version>
-            <scope>provided</scope>
-        </dependency>
-    <dependency>
-            <groupId>org.mule.transports</groupId>
-            <artifactId>mule-transport-jms</artifactId>
-            <version>${mule.version}</version>
-            <scope>provided</scope>
-        </dependency>
-    <dependency>
-            <groupId>org.mule.modules</groupId>
-            <artifactId>mule-module-json</artifactId>
-            <version>${mule.version}</version>
-            <scope>provided</scope>
-        </dependency>
-    </dependencies>
+		<dependency>
+			<groupId>org.mule.modules</groupId>
+			<artifactId>mule-module-http</artifactId>
+			<version>${mule.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mule.modules</groupId>
+			<artifactId>mule-module-spring-config</artifactId>
+			<version>${mule.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mule.modules</groupId>
+			<artifactId>mule-module-db</artifactId>
+			<version>${mule.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mule.transports</groupId>
+			<artifactId>mule-transport-jms</artifactId>
+			<version>${mule.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mule.modules</groupId>
+			<artifactId>mule-module-json</artifactId>
+			<version>${mule.version}</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
 
 	<repositories>
- 
-        <repository>
-          <id>central</id>
-          <name>xjja-lib-releases</name>
-          <url>https://artifactory.doc.ks.gov/artifactory/xjja-lib-releases</url>
-        </repository>
-      </repositories>
-      
-      <pluginRepositories>
-        <pluginRepository>
-          <id>central</id>
-          <name>xjja-plugin-releases</name>
-          <url>https://artifactory.doc.ks.gov/artifactory/xjja-plugin-releases</url>
-        </pluginRepository>
-           
-    </pluginRepositories>
+
+		<repository>
+			<id>central</id>
+			<name>xjja-lib-releases</name>
+			<url>https://artifactory.doc.ks.gov/artifactory/xjja-lib-releases</url>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>central</id>
+			<name>xjja-plugin-releases</name>
+			<url>https://artifactory.doc.ks.gov/artifactory/xjja-plugin-releases</url>
+		</pluginRepository>
+
+	</pluginRepositories>
 </project>
